@@ -1,4 +1,5 @@
 require(grDevices) # for trans3d
+require(lattice)
 
 f <- function(x, y) { ((x-20)*(1+y))/15 + y }
 
