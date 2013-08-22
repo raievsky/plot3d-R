@@ -27,7 +27,7 @@ print(wireframe(wn ~ T * ws, data=d, drape = TRUE,  col.regions = my.colors, xla
 
 # Display the graph in a pdf file
 pdf("waterNeedIncrement.pdf", paper="a4")
-print(wireframe(wn ~ T * ws, data=d, drape = TRUE,  col.regions = my.colors, xlab="T°C", scales=list(arrows=FALSE), colorkey = list(col=my.colors),screen = list(z = -10, x = -80, y=0)))
+print(wireframe(wn ~ T * ws, data=d, drape = TRUE,  col.regions = my.colors, xlab="T°C", ylab=list(label="wind speed\n(m/s)", rot=0), zlab=list(label="watering increment", rot=90), scales=list(arrows=FALSE), colorkey = list(col=my.colors),screen = list(z = -10, x = -80, y=0)))
 dev.off()
 
 # persp(x, y, z, theta = 30, phi = 30, expand = 0.5, col = "lightblue",ltheta = 120, shade = 0.75, ticktype = "detailed",xlab = "T", ylab = "ws", zlab = "wn")
